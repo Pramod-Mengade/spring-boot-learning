@@ -1,0 +1,21 @@
+package com.pramod.SpringCoreDemo.rest;
+
+import com.pramod.SpringCoreDemo.common.Coach;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+@RestController
+public class DemoController {
+    private Coach myCoach;
+
+    @Autowired
+    public DemoController(Coach theCoach){
+        myCoach = theCoach;
+    }
+
+    @GetMapping("/dailyWorkout")
+    public String dailyWorkout(){
+        return myCoach.dailyWorkout();
+    }
+
+}

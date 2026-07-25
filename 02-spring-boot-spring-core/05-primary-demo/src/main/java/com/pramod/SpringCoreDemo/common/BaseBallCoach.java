@@ -1,0 +1,12 @@
+package com.pramod.SpringCoreDemo.common;
+
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+public class BaseBallCoach implements Coach{
+    @Override
+    public  String dailyWorkout(){
+        return "Play 10 Fast baseBalls!";
+    }
+}
